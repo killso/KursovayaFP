@@ -38,7 +38,7 @@ object RecursiveFunctions {
    *        def map[A, B](list: List[A])(f: A => B): List[B]
    */
 
-  def map[A, B](list: List[A])(f: A => B): List[B] = {
+  def Map[A, B](list: List[A])(f: A => B): List[B] = {
     @tailrec
     def loop2(l: List[A], num: List[B]): List[B] = l match {
       case Nil() => reverse(num)
@@ -54,7 +54,7 @@ object RecursiveFunctions {
    *        def append[A](l: List[A], r: List[A]): List[A]
    */
 
-  def append[A](l: List[A], r: List[A]): List[A] =
+  def Append[A](l: List[A], r: List[A]): List[A] =
     l match {
       case Nil() => r
       case Cons(h,t) => Cons(h, append(t, r))
@@ -70,7 +70,7 @@ object RecursiveFunctions {
    *    списке. Поэтому вы создаете List[List[B]].
    */
 
-  def flatMap[A,B](list: List[A])(f: A=>List[B]): List[B] = {
+  def FlatMap[A,B](list: List[A])(f: A=>List[B]): List[B] = {
     @tailrec
     def loop2(l: List[A],num: List[B]): List[B] = l match {
       case Nil() => reverse(num) //
