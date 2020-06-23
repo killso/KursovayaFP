@@ -41,21 +41,22 @@ object PatternMatching {
    *     3 => "it is three"
    *     иначе => "what's that"
    */
-  def a(value: Int): String = {
+  def intToString(value: Int): String =
     value match {
       case 1 => "it is one"
       case 2 => "it is two"
       case 3 => "it is three"
-      case _ => "what's that"
+      case other => "what's that"
     }
-  }
+
+}
   // примените вашу функцию из пункта (a) здесь, не изменяя сигнатуру
   def testIntToString(value: Int):String=a(value)
   /* b) Напишите функцию которая возвращает true если переменная `value` принимает значение:
    *     "max" или "Max
    *     "moritz" или "Moritz"
    */
-  def IsMaxAndMoritz(value: String): Boolean = {
+  def isMaxAndMoritz(value: String): Boolean = {
     value match {
       case "max" => true
       case "Max" => true

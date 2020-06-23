@@ -13,12 +13,14 @@ object HigherOrder {
 
 
   // примените вашу функцию (a) здесь, не изменяйте сигнатуру
-  def testnTimes(f: (Int, Int) => Int, a: Int, b: Int, n: Int): Int = nTimes(f, a, b, n)
+  def testNTimes(f: (Int, Int) => Int, a: Int, b: Int, n: Int): Int = nTimes(f, a, b, n)
 
   /* b) Напишите анонимную функцию, функцию без идентификатора ((a, b) => ???) для `nTimes` которая
    *    выполняет следующее:
    *          if (a > b) a else b
    */
-  def anon = (a: Int, b: Int) => if (a > b) a else b
-  def Anon1(a: Int, b: Int, n: Int): Int = nTimes(anon, a, b, n)
+  def testAnonymousNTimes(a: Int, b: Int, n: Int): Int = nTimes((a: Int, b: Int) => {
+    if (a > b) a else b
+  }, a: Int, b: Int, n: Int)
 }
+
