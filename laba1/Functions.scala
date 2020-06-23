@@ -11,16 +11,16 @@ object Functions {
   /* a) Напишите функцию, которая рассчитывает площадь окружности
    *    r^2 * Math.PI
    */
-  def sOkr(val r: Double): Double = r * r * Math.PI
+  def CircleArea(val r: Double): Double = r * r * Math.PI
   // примените вашу функцию из пункта (a) здесь, не изменяя сигнатуру
-  def testCircle(r: Double): Double = sOkr(r)
+def testCircle(r: Double): Double = CircleArea(r)
   /* b) Напишите карированную функцию которая рассчитывает площадь прямоугольника a * b.
    */
-  def sKvdrt(a: Double)(b: Double): Double = a * b
+  def RectangeAreaCurried(a: Double)(b: Double): Double = a * b
   // примените вашу функцию из пукта (b) здесь, не изменяя сигнатуру
-  def testRectangleCurried(a: Double, b: Double): Double = sKvdrt(a)(b)
+  def testRectangleCurried(a: Double, b: Double): Double = RectangeAreaCurried(a)(b)
   // c) Напишите не карированную функцию для расчета площади прямоугольника.
-  def sPrmgl(a: Double, b: Double): Double = a * b
+  def RectangleArea(a: Double, b:Double): Double = a * b
   // примените вашу функцию из пункта (c) здесь, не изменяя сигнатуру
-  def testRectangleUc(a: Double, b: Double): Double = sPrmgl(a, b)
+  def testRectangleUc(a: Double, b: Double): Double = RectangleArea(a, b)
 }
