@@ -1,5 +1,3 @@
-package exercise1
-
 /** Напишите ваши решения в виде функций. */
 object HigherOrder {
 
