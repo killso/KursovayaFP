@@ -26,7 +26,7 @@ case class None[A]() extends Option[A] {
 object Compositions {
   // a) Используйте данные функции. Вы можете реализовать свое решение прямо в тестовой функции.
   // Нельзя менять сигнатуры
-  def testMapFlatMap[A, B, C, D](f: A => Option[B])
+  def testCompose[A, B, C, D](f: A => Option[B])
                                 (g: B => Option[C])
                                 (h: C => D): Option[A] => Option[D] = {
     _.flatMap(f).flatMap(g).map(h)
